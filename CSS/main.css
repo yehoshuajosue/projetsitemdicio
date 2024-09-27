@@ -52,6 +52,17 @@ a {
     margin-right: 8px;
 }
 
+.header .cta-btn,
+.header .cta-btn:focus {
+  color: #363636;
+  background: #3fbbc0;
+  font-size: 14px; 
+  padding:  8px 20px;
+  margin: 0 5px 0 30px;
+  border-radius: 5px;
+  transition: ;
+}
+
 
 /* Nav menu Desktop = Responsivo */
 @media (min-width:1200px) {
@@ -326,4 +337,38 @@ a {
   font-size: 36px;
   font-weight: 700;
   color: #195052;
+}
+.hero .carousel-control-prev {
+  justify-content: start;
+}
+.hero .carousel-control-next {
+  justify-content: end;
+}
+.hero .carousel-control-next-icon,
+.hero .carousel-control-prev-icon {
+  background: #808080;
+  font-size: 26px;
+  color: white;
+  border-radius: 50px;
+  transition: .3s;
+  width: 54px;
+  height: 54px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.hero .carousel-indicators {
+  cursor: pointer;
+  background: #808080;
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  overflow: hiddem;
+  border: 0;
+  border-radius: 50px;
+  transition: .3s;
+}
+.hero .carousel-indicators .active {
+  opacity: 1;
+  background: #3fbbc0;
 }
