@@ -77,7 +77,7 @@ a {
 
 
 /* Nav menu Desktop = Responsivo */
-@media (min-width:1200px) {
+@media (min-width: 1200px) {
   .navmenu {
       padding: 0;
   }
@@ -301,6 +301,8 @@ a {
   position: relative;
 }
 
+
+
 .hero img {
   position: absolute;
   display: block;
@@ -332,6 +334,7 @@ border-top: 4px solid red;
 z-index: 3;
 margin-bottom: 50px;
 }
+
 
 @media (max-width: 1200px) {
   .hero .container {
@@ -369,25 +372,25 @@ font-weight: 700;
   justify-content: center;
 } 
 
-.hero .carousel-indicators {
+.hero .carousel-indicators li {
   cursor: pointer;
-  background: #444;
-  width: 12px;
-  height: 12px;
-  opacity: 1;
+  background: #fff;
   overflow: hidden;
   border: 0;
+  width: 12px;
+  height: 12px;
   border-radius: 50px;
+  opacity: 1;
   transition: 0.3s;
 }
 
-.hero .carousel-indicators.active  {
+.hero .carousel-indicators li.active {
   opacity: 1;
-  background: red;
+  background: #01d2e9;
 }
 
-@media (max-height:500px), 
-(max-width:500px)  {
+@media (max-height: 500px), 
+(max-width: 500px)  {
   .hero .carousel {
       min-height: 100vh;
   }
@@ -474,7 +477,7 @@ section,
 }
 
 .accent-background {
-  background: #3fbbc0;
+  background: #36a1a5;
   color: #e0e0e0;
 }
 
@@ -494,6 +497,7 @@ section,
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
+  color: #00a2b4;
 }
 
 .section-title h2:after {
@@ -836,53 +840,54 @@ section,
   color: #2293a0;
 }
 
-/* Consulta // Forms */
+/* Consulta // Forms  */
 
 .consulta .email-form {
   width: 100%;
 }
 
-.consulta .email-form .form-group {
+.consulta .email-form .form-group { 
   padding-bottom: 8px;
+
 }
 
 .consulta .email-form input,
 .consulta .email-form textarea,
 .consulta .email-form select {
-  color: #808080;
-  background-color: whitesmoke;
-  border-color: color-mix(in srgb, color red, color 80%);
-  border-radius: 0;
+  color: #017e8c;
+  background: whitesmoke;
+  /* border-color: ; */
+  /* border-radius: 0; */
   box-shadow: none;
   font-size: 14px;
-  padding: 10px; !important
+  padding: 10px !important;
 }
 
 .consulta .email-form input::placeholder,
 .consulta .email-form textarea::placeholder,
 .consulta .email-form select::placeholder {
-  color: color-mix(in srgb, color #0c7a7d, color 50%);
-  /*color: red;*/
+  color: color-mix(in srgb, #0c7a7d, transparent 50%);
+  /* color: red; */
 }
 
-/*Quando o input for selecionado*/
+/* Quando o Input for selecionado */
 .consulta .email-form input:focus,
 .consulta .email-form textarea:focus,
 .consulta .email-form select:focus {
-  border-color: red;
+  border-color: #00cdcd;
 }
 
-.consulta .email-form input,
+.consulta .email-form input, 
 .consulta .email-form select {
   height: 44px;
 }
 
 .consulta .email-form textarea {
-  padding: 55px;
+  padding: 10px 12px;
 }
 
 .consulta .email-form button {
-  background: #01d2e9;
+  background: #00a2b4;
   color: whitesmoke;
   border: 0;
   padding: 10px 35px;
@@ -892,24 +897,95 @@ section,
 }
 
 .consulta .email-form button:hover {
-  background: #006b77;
-  /*color*/
+  background: #4bbac6;
+  /* color: ; */
 }
 
-/* FAQ */
+.doctors .team-member { 
+  background: #efefef;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.doctors .team-member .member-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.doctors .team-member .social { 
+  position: absolute; /* era o unico */
+  left: 0;
+  bottom: 30px;
+  right: 0;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  text-align: center;
+}
+
+.doctors .team-member .social a { 
+  background: whitesmoke;
+  color: black;
+  margin: 0 3px;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  transition: ease-in-out 0.3s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.doctors .team-member .social a:hover { 
+  color: #fff;
+  background: #01d2e9;
+}
+
+
+.doctors .team-member .member-info {
+  padding: 25px 15px;
+  /* text-align: center; */
+}
+
+.doctors .team-member:hover .social {
+  opacity: 1;
+  bottom: 15px;
+}
+
+.doctors .team-member .social i {
+  font-size: 18px;
+  line-height: 0;
+}
+
+.doctors .team-member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.doctors .team-member .member-info span {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  /*colo: opcional;*/
+}
+
+
+/*  FAQ  */
 
 .faq .faq-container .faq-item {
   background: #ccc;
   position: relative;
   padding: 20px;
   margin-bottom: 15px;
-  /*border: ;*/
+  /* border: ; */
   border-radius: 5px;
   overflow: hidden;
 }
 
 .faq .faq-container .faq-item h3 {
-  font-weight: 60px;
+  font-weight: 600;
   font-size: 22px;
   line-height: 24px;
   margin: 0 30px 0 0;
@@ -920,18 +996,17 @@ section,
 }
 
 .faq .faq-container .faq-item h3:hover {
-  background: #00b0c4;
-  color: whitesmoke;
+  color: #00b0c4;
 }
 
 .faq .faq-container .faq-item .faq-content {
   display: grid;
-  transition: 0.3 ease-in-out;
+  transition: 0.3s ease-in-out;
   visibility: hidden;
   opacity: 0;
 }
 
-.faq .faq-container .faq-item .faq-content {
+.faq .faq-container .faq-item .faq-content p {
   margin-bottom: 0;
   overflow: hidden;
 }
@@ -940,11 +1015,11 @@ section,
   position: absolute;
   top: 20px;
   right: 20px;
-  font-size: 16px;
+  font-size: 22px;
   line-height: 0;
   transition: 0.3s;
   cursor: pointer;
-  color: #00b0c4;
+  color: #38d4d4;
 }
 
 .faq .faq-container .faq-item .faq-toggle:hover {
@@ -955,7 +1030,7 @@ section,
   border-color: black;
 }
 
-.faq .faq-container .faq-active .faq-content{
+.faq .faq-container .faq-active .faq-content {
   visibility: visible;
   opacity: 1;
   padding-top: 10px;
@@ -964,4 +1039,66 @@ section,
 .faq .faq-container .faq-active .faq-toggle {
   transform: rotate(90deg);
   color: #01d2e9;
+}
+
+/* contato */
+
+.contato .info-item {
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  padding: 24px 0 30px 0;
+}
+
+.contato .info-item i {
+  color: var(--accent-color);
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50%;
+  border: 2px dotted #0d8084;
+}
+
+.contato .info-item h3 {
+  font-size: 20px;
+  color: #292929;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.contato .info-item p {
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+/* Responsivos  */
+
+@media (max-height: 500px), 
+(max-width: 580px) {
+  .hero .carousel {
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 30px;
+  }
+}
+
+
+@media (min-width: 640px) {  
+  .hero .carousel-control-prev {
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 640px) {   
+  .hero .carousel-control-next {
+    padding-right: 15px;
+  }
 }
